@@ -44,10 +44,20 @@ Table 2 (treewidth, min-degree heuristic upper bound):
   (tw = 1). The report's tractability argument only needs an upper bound.
 - The exact solver is exhaustive enumeration, feasible at the n = 30 study
   scale (C(30, 5) = 142,506 subsets per instance).
-- **Not in this repository:** the CIGRE MV benchmark study (report Table 3),
-  the Rydberg atom-count estimates (report Table 4), and the distance-gap
-  study — these were produced separately and are not covered by
-  `reproduce.py`.
+- `cigre_mv.py` reproduces the CIGRE MV European benchmark study (report's
+  CIGRE table and the switching-state / degenerate-optima observations):
+  `python cigre_mv.py`. Topology per CIGRE Task Force C6.04.02.
+- `cigre_degeneracy.py` enumerates all tied-optimal placements on the CIGRE
+  network (10 at B=2, 17 at B=3, radial, uniform priorities) — the report's
+  degenerate-optima claim.
+- `simbench_coverage.py` runs the same coverage study on a real-calibrated
+  German MV network (SimBench, with pandapower `mv_oberrhein` fallback).
+  **Requires pandapower; run locally** — not exercised by `reproduce.py`.
+  The report's §1.3(e) numbers come from the author's local run, recorded
+  verbatim in `results/simbench_run.txt` (versions unpinned for that run).
+- **Not in this repository:** the Rydberg atom-count estimates (report
+  Table on atom counts) and the distance-gap study — produced separately,
+  not covered by `reproduce.py`.
 
 ## Environment
 

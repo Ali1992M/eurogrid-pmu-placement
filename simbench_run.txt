@@ -1,0 +1,19 @@
+Local run by the author (Windows, system Python; package versions not pinned
+for this run -- rerun with a pinned environment for full protocol discipline).
+Command: python simbench_coverage.py
+
+[selftest] tree DP == enumeration on 200 random trees  OK
+=== SimBench 1-MV-rural--0-sw - radial operation: 95 buses, 93 lines, forest (radial) ===
+B=  5 uniform: greedy 17/93  exactDP 17  ratio 1.0000
+        25 random-priority seeds: mean 1.0000, worst 1.0000
+B= 10 uniform: greedy 28/93  exactDP 28  ratio 1.0000
+        25 random-priority seeds: mean 0.9995, worst 0.9952
+B= 15 uniform: greedy 38/93  exactDP 38  ratio 1.0000
+        25 random-priority seeds: mean 0.9987, worst 0.9919
+=== SimBench 1-MV-rural--0-sw - all ties closed: 95 buses, 99 lines, meshed ===
+B=  5 uniform: greedy 18/99  exactILP 18  ratio 1.0000
+        25 random-priority seeds: mean 1.0000, worst 1.0000
+B= 10 uniform: greedy 31/99  exactILP 31  ratio 1.0000
+        25 random-priority seeds: mean 0.9998, worst 0.9956
+B= 15 uniform: greedy 41/99  exactILP 41  ratio 1.0000
+        25 random-priority seeds: mean 0.9992, worst 0.9937
