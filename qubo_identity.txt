@@ -1,0 +1,2 @@
+28-bus weakly meshed feeder: 31 QUBO couplings, 31 network lines
+QUBO value == covered weight on 500/500 random assignments

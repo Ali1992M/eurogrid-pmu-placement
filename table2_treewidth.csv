@@ -1,0 +1,5 @@
+topology,n_buses,treewidth_upper_bound_min_degree
+radial feeder,100,1
+radial feeder,400,1
+weakly meshed (8 ties),100,4
+weakly meshed (30 ties),400,11

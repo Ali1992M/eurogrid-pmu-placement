@@ -1,0 +1,5 @@
+topology,mean_ratio,worst_observed,n_instances
+radial feeder,0.9996,0.9839,36
+weakly meshed,0.9994,0.9868,36
+denser meshed,0.9984,0.9811,36
+overall,0.9991,0.9811,108
