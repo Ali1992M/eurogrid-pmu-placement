@@ -1,0 +1,81 @@
+{
+  "script": "robust_qaoa_demo.py",
+  "date_utc": "2026-09-06T12:06:56.315567+00:00",
+  "commit": "UNCOMMITTED",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1"
+  },
+  "instance": {
+    "n_buses": 14,
+    "budget": 3,
+    "radial_lines": 12,
+    "tie_lines": 3,
+    "n_scenarios": 5,
+    "weight_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "eps_diversity": 0.02
+  },
+  "qaoa": {
+    "depth_p": 2,
+    "restarts": 3,
+    "shots_per_round": 2000,
+    "mw_rounds": 4,
+    "mw_eta": 1.0,
+    "encodings": [
+      "A: full space, X mixer, quadratic penalty",
+      "B: subspace, complete XY mixer, Dicke init"
+    ]
+  },
+  "aggregate": {
+    "nominal_greedy_suboptimal_seeds": 16,
+    "n_seeds": 20,
+    "nominal_greedy_mean_ratio": 0.916725,
+    "nominal_greedy_worst_ratio": 0.813849
+  },
+  "showcase_seed": 1,
+  "showcase": {
+    "robust_optimum": 6.501478,
+    "optimum_buses_1idx": [
+      7,
+      9,
+      13
+    ],
+    "n_near_optimal_total": 1,
+    "nominal_greedy_ratio": 0.855799,
+    "robust_greedy_ratio": 1.0,
+    "qaoa": {
+      "full": {
+        "best_ratio": 1.0,
+        "near_found": 1,
+        "candidates": 357
+      },
+      "xy": {
+        "best_ratio": 1.0,
+        "near_found": 1,
+        "candidates": 363
+      }
+    }
+  }
+}

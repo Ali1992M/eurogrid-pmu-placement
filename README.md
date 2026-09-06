@@ -55,6 +55,14 @@ Table 2 (treewidth, min-degree heuristic upper bound):
   **Requires pandapower; run locally** — not exercised by `reproduce.py`.
   The report's §1.3(e) numbers come from the author's local run, recorded
   verbatim in `results/simbench_run.txt` (versions unpinned for that run).
+- `robust_qaoa_demo.py` — end-to-end emulated prototype of the *robust*
+  (max–min) pipeline: multiplicative-weights scenario master, two QAOA
+  budget encodings (X-mixer+penalty; XY subspace mixer with Dicke init),
+  exact robust evaluator. Needs scipy. Writes a provenance-stamped
+  `robust_qaoa_results.json` (reference copy in `results/`). Headline
+  result: nominal greedy is robust-suboptimal in 16/20 seeds (mean 0.917,
+  worst 0.814). The QAOA "optimum found" is architecture validation only —
+  at C(14,3)=364 the samplers near-enumerate the feasible space.
 - **Not in this repository:** the Rydberg atom-count estimates (report
   Table on atom counts) and the distance-gap study — produced separately,
   not covered by `reproduce.py`.
