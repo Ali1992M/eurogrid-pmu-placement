@@ -63,6 +63,17 @@ Table 2 (treewidth, min-degree heuristic upper bound):
   result: nominal greedy is robust-suboptimal in 16/20 seeds (mean 0.917,
   worst 0.814). The QAOA "optimum found" is architecture validation only —
   at C(14,3)=364 the samplers near-enumerate the feasible space.
+- `dwave_robust.py` — direct annealer run on the robust surrogate
+  (report §5.3 route (ii)): DWaveSampler + EmbeddingComposite, three
+  Lagrangian prices, exact robust evaluation, embedding/chain/TTS metrics,
+  provenance-stamped JSON. Quickstart: `pip install dwave-ocean-sdk`,
+  `dwave config create` (paste Leap API token), `dwave ping`, then
+  `python dwave_robust.py --local` (free classical dry run) before
+  `python dwave_robust.py` (QPU; ~seconds of access time).
+- `robust_qaoa_aggregate.py` — the aggregates behind the report's robust
+  table: robust-greedy 6/20 suboptimal (mean 0.986, worst 0.920), the
+  neither-dominates observation (nominal greedy optimal on robust greedy's
+  worst seed, 12), and the seed-12 showcase (`--qaoa` flag for the QAOA runs).
 - **Not in this repository:** the Rydberg atom-count estimates (report
   Table on atom counts) and the distance-gap study — produced separately,
   not covered by `reproduce.py`.
